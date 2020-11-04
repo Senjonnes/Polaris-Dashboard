@@ -22,7 +22,6 @@ export class UsersService {
   _get_todos() {
     this.get_todos().subscribe(response => {
       if (response) {
-        console.log(response)
         if (response.length > 0) {
           this.todos.next(response);
         } else {

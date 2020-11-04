@@ -12,9 +12,6 @@ export class NavItemMainComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-    console.log(this.mainMenu)
-    console.log(this.index)
-  }
+  ngOnInit(): void { }
 
 }

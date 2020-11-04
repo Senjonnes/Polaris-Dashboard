@@ -16,7 +16,15 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; overflow: h
 }
 
 .font-secondary {
-    color: #4fc143!important;
+    color: #27AE60!important;
+}
+
+.font-warning {
+    color: #FDC203!important;
+}
+
+.text-default {
+    color: #262626!important;
 }
 
 .bg-primary {
@@ -931,7 +939,27 @@ input[type=number] {
   /*change color of label*/
   color: white !important;
 }
- 
+
+.audio-progress-bar {
+    // &.mat-progress-bar {
+    //   height: 10px;
+    // }
+  
+    .mat-progress-bar-fill::after {
+      background-color: #27AE60;
+    }
+  
+    .mat-progress-bar-buffer {
+      background-color: #FDC203;
+    }
+  
+    /* remove animation and the dots*/ 
+    // .mat-progress-bar-background {
+    //   animation: none;
+    //   background-color: #eceff1;
+    //   fill: #eceff1;
+    // }
+}
  
 .dater mat-datepicker-toggle {
   color: white !important;

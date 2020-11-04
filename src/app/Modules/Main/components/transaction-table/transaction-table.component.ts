@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { UsersList } from './table'
@@ -23,6 +23,7 @@ export class TransactionTableComponent implements OnInit {
 
   isAlive: boolean;
   isLoading: boolean;
+  @Input() tableData: any;
 
   constructor(
     private  dialog:  MatDialog,
@@ -36,27 +37,18 @@ export class TransactionTableComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.get_all_users();
+    this.get_all_todos();
   }
 
-  get_all_users() {
-    let currentApp = JSON.parse(localStorage.getItem('currentApp'));
-    
-    this.usersSvc._get_todos()
-    this.usersSvc.todos.pipe( takeWhile( () => this.isAlive)).subscribe(res => {
-      if(res) {
-        this.ELEMENT_DATA = res;
-        this.displayedColumns = ['id', 'userId', 'title', 'completed'];
-        this.dataSource = new MatTableDataSource<UsersList>(this.ELEMENT_DATA);
-        this.dataSource.paginator = this.paginator;
-      }
-    })
+  get_all_todos() {
+    this.ELEMENT_DATA = this.tableData;
+    this.displayedColumns = ['id', 'userId', 'title', 'completed'];
+    this.dataSource = new MatTableDataSource<UsersList>(this.ELEMENT_DATA);
+    this.dataSource.paginator = this.paginator;
 
   }
 
-  userDetails(user) {
-    console.log(user)
-  }
+  userDetails(user) {}
 
   applyFilter(event: Event) {
     if(event) {

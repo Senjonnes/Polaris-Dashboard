@@ -116,14 +116,34 @@ nav {
     background: #ffffff!important;
     border-bottom: 2px solid #f4f5f8;
     border-left: 2px solid #f4f5f8;
+    padding: 20px;
+    height: 50%;
 }
 
 .details2 {
     background: #ffffff!important;
     border-top: 2px solid #f4f5f8;
     border-left: 2px solid #f4f5f8;
+    padding: 20px;
+    height: 50%;
 }
 
 .details {
-    background: #f4f5f8!important;
+    background: #ffffff!important;
+}
+
+.labels {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: 700;
+}
+
+.headings {
+    padding: 32px;
+}
+
+.line-h-2 {
+    line-height: 2;
 }

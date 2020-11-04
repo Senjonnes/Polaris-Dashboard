@@ -1,13 +1,46 @@
 <div class="row sortings">
-    <div class="col-md-8 table1">
-        Seun
+    <div class="col-md-8 table1 p-0">
+        <div>
+        </div>
+        <div class="w100">
+            <div class="headings row">
+                <div class="col-md-8 text12 fw700">
+                    Today: 5, Aug 2018
+                </div>
+                <div class="col-md-4">
+                    <form [formGroup]="dateForm" class="row">
+                        <mat-form-field appearance="none" style="width: 98%;" class="bc-dater">
+                            <input placeholder="D/MM/YYYY" matInput [matDatepicker]="date_" formControlName="date_" (dateChange)=update()>
+                            <mat-datepicker-toggle matSuffix [for]="date_"></mat-datepicker-toggle>
+                            <mat-datepicker #date_></mat-datepicker>
+                        </mat-form-field>
+                    </form>
+                </div>
+            </div>
+            <div class="labels">
+                <div class="col-md-2 text-center">Jan</div>
+                <div class="col-md-2 text-center">Feb</div>
+                <div class="col-md-2 text-center">Mar</div>
+                <div class="col-md-2 text-center">Apr</div>
+                <div class="col-md-2 text-center">May</div>
+                <div class="col-md-2 text-center">Jun</div>
+            </div>
+            <img class="w100" src='assets/img/big_graph.svg'>
+        </div>
     </div>
     <div class="col-md-4 p-0 details">
-        <div class="details1">
-            Seun
-        </div>
-        <div class="details2">
-            Seun
+        <div class="h100" *ngIf="items">
+            <ng-container *ngFor="let item of items; let i = index">
+                <div [ngClass]="i === 0 ? 'details1' : 'details2'">
+                    <div class="fw700">{{item.title}}</div>
+                    <div style="padding: 10px 0px;">
+                        <mat-progress-bar class="audio-progress-bar" mode="determinate" [value]="item.rate"></mat-progress-bar>
+                    </div>
+                    <div class="line-h-2">Pending Orders: <span class="font-warning fw700">{{item.pending}}</span></div>
+                    <div class="line-h-2">Reconcilled Orders: <span class="font-secondary fw700">{{item.reconcilled}}</span></div>
+                    <div class="line-h-2">Total Orders: <span class="text-primary fw700">{{item.total}}</span></div>
+                </div>
+            </ng-container>
         </div>
     </div>
 </div>

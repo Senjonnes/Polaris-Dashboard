@@ -14,18 +14,21 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule, MatStepperModule, MatFormFieldModule, MatInputModule, MatIconModule,
     MatRadioModule,  MatButtonModule, MatSelectModule, MatTableModule, MatPaginatorModule, 
-    MatDialogModule, MatIconModule, MatProgressSpinnerModule, MatDatepickerModule, MatNativeDateModule
+    MatDialogModule, MatIconModule, MatProgressSpinnerModule, MatDatepickerModule, MatNativeDateModule,
+    MatProgressSpinnerModule, MatProgressBarModule
   ],
   exports: [
     MatStepperModule, MatFormFieldModule, MatInputModule, MatIconModule,
     MatRadioModule,  MatButtonModule, MatSelectModule, MatTableModule, MatPaginatorModule, 
-    MatDialogModule, MatIconModule, MatProgressSpinnerModule, MatDatepickerModule, MatNativeDateModule
+    MatDialogModule, MatIconModule, MatProgressSpinnerModule, MatDatepickerModule, MatNativeDateModule,
+    MatProgressSpinnerModule, MatProgressBarModule
   ]
 })
 export class AngularMaterialModule { }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-transaction-status',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TransactionStatusComponent implements OnInit {
 
+  public date;
+  public dateForm = new FormGroup({
+    date_: new FormControl(),
+  });
+
+  @Input() items: any;
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+
+  update() {
+    this.date = this.dateForm.get('date_').value;
+    this.date = this.date && this.date.toISOString();
+    this.date = this.date && this.date.split('T')[0];
   }
 
 }

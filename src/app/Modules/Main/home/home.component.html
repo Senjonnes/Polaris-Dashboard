@@ -8,28 +8,25 @@
                     <div *ngFor="let tran of transactions" class="col-md-3 mb-10">
                         <app-transaction-chart [tran]="tran"></app-transaction-chart>
                     </div>
-                    <!-- <div class="col-md-3 mb-10">
-                        <app-transaction-chart></app-transaction-chart>
-                    </div>
-                    <div class="col-md-3 mb-10">
-                        <app-transaction-chart></app-transaction-chart>
-                    </div>
-                    <div class="col-md-3 mb-10">
-                        <app-transaction-chart></app-transaction-chart>
-                    </div> -->
                 </div>
             </div>
         </div>
         
         <div class="container-fluid main-page">
             <div class="container_">
-                <app-transaction-status></app-transaction-status>
+                <app-transaction-status [items]="items"></app-transaction-status>
             </div>
         </div>
         
         <div class="container-fluid main-page">
             <div class="container_">
-                <app-transaction-table></app-transaction-table>
+                <div class="text20 py-10 text-default">Payments</div>
+                <ng-container *ngIf="!tableData">
+                    <div class="item-v-center mt-20">
+                        <div class="spinner-grow" role="status"><span class="sr-only">Loading...</span></div>
+                    </div>
+                </ng-container>
+                <app-transaction-table *ngIf="tableData" [tableData]="tableData"></app-transaction-table>
             </div>
         </div>
     </div>

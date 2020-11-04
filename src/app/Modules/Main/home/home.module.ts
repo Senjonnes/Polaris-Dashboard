@@ -10,9 +10,10 @@ import { NavModule } from 'src/app/CoreFeatures/nav/nav.module';
 import { TransactionChartComponent } from '../components/transaction-chart/transaction-chart.component';
 import { TransactionStatusComponent } from '../components/transaction-status/transaction-status.component';
 import { TransactionTableComponent } from '../components/transaction-table/transaction-table.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [ HomeComponent, HeaderComponent, FooterComponent, TransactionChartComponent, TransactionStatusComponent, TransactionTableComponent ],
-  imports: [ CommonModule, HomeRoutingModule, AngularMaterialModule, NavModule ],
+  imports: [ CommonModule, HomeRoutingModule, AngularMaterialModule, NavModule, FormsModule, ReactiveFormsModule ],
 })
 export class HomeModule { }
