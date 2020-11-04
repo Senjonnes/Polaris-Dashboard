@@ -1,5 +1,8 @@
-<div class="contents">Main</div>
+<div class="contents" *ngIf="index === 0">Main</div>
+<div class="contents" *ngIf="index === 1">Payments</div>
+<div class="contents" *ngIf="index === 2">Orders</div>
 <div class="list-group list-group-flush">
-    <a class="active list-group-item list-group-item-action bg-light content-item"><img src='assets/img/overview.svg' class="mr-20">Overview</a>
-    <!-- <a class="list-group-item list-group-item-action bg-light content-item"><img src='../../../../../assets/icon/speed.svg' class="mr-20">Overview</a> -->
+    <a *ngFor="let menu of mainMenu" [ngClass]="menu.status === 'active' ? 'active' : null" class="list-group-item list-group-item-action bg-light content-item">
+        <img [src]="menu.icon" class="mr-20">{{menu.name}}
+    </a>
 </div>

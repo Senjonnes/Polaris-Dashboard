@@ -115,6 +115,18 @@ tr.mat-row:hover {
     align-items: center;
 }
 
+.status_green {
+    border: 1px solid #27AE60;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.status_warning {
+    border: 1px solid #EBC315;
+    padding: 10px;
+    border-radius: 30px;
+}
+
 .status-red {
     width: 10px;
     height: 10px;
@@ -126,14 +138,14 @@ tr.mat-row:hover {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: #99C354;
+    background: #27AE60;
 }
 
 .status-warning {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #F2994A;;
+  background: #EBC315;
 }
 
 .searches {
@@ -171,4 +183,15 @@ tr.mat-row:hover {
 
 th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
   padding: 20px;
+}
+
+.userId {
+    height: 40px;
+    width: 40px;
+    background: #7F8FA4;;
+    color: #ffffff !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
 }

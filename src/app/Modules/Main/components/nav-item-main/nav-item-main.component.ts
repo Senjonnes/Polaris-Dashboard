@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-nav-item-main',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavItemMainComponent implements OnInit {
 
+  @Input() mainMenu: any;
+  @Input() index: any;
+
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.mainMenu)
+    console.log(this.index)
   }
 
 }

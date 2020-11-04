@@ -3,8 +3,8 @@
     <div class="sidebar-heading">
         <button class="btn invoice-btn">GENERATE INVOICE</button>
     </div>
-    <app-nav-item-main></app-nav-item-main>
-    <app-nav-item-payment></app-nav-item-payment>
-    <app-nav-item-orders></app-nav-item-orders>
+    <ng-container *ngFor="let mainMenu of menu; let i = index">
+        <app-nav-item-main [mainMenu]="mainMenu" [index]="i"></app-nav-item-main>
+    </ng-container>
 </div>
 <!-- /#sidebar-wrapper -->

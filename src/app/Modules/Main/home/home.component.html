@@ -5,7 +5,10 @@
         <div class="container-fluid main-page">
             <div class="container_">
                 <div class="row transaction-charts">
-                    <div class="col-md-3 mb-10">
+                    <div *ngFor="let tran of transactions" class="col-md-3 mb-10">
+                        <app-transaction-chart [tran]="tran"></app-transaction-chart>
+                    </div>
+                    <!-- <div class="col-md-3 mb-10">
                         <app-transaction-chart></app-transaction-chart>
                     </div>
                     <div class="col-md-3 mb-10">
@@ -13,10 +16,7 @@
                     </div>
                     <div class="col-md-3 mb-10">
                         <app-transaction-chart></app-transaction-chart>
-                    </div>
-                    <div class="col-md-3 mb-10">
-                        <app-transaction-chart></app-transaction-chart>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

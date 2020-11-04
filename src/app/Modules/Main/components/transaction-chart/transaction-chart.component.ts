@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-transaction-chart',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TransactionChartComponent implements OnInit {
 
+  @Input() tran: any
+
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.tran)
   }
 
 }

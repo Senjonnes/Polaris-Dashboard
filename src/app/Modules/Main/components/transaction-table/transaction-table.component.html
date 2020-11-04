@@ -3,36 +3,38 @@
         <mat-form-field>
             <mat-label>Filter</mat-label>
             <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
-            <!-- <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input> -->
         </mat-form-field>
         <div class="mat-elevation-z8">
             <table mat-table [dataSource]="dataSource">
           
-              <!-- Position Column -->
-              <ng-container matColumnDef="Sn">
+              <ng-container matColumnDef="id">
                 <th mat-header-cell *matHeaderCellDef> No. </th>
-                <td mat-cell *matCellDef="let element"> {{element.Sn}} </td>
+                <td mat-cell *matCellDef="let element"> {{element.id}} </td>
               </ng-container>
           
-              <!-- Name Column -->
-              <ng-container matColumnDef="Name">
-                <th mat-header-cell *matHeaderCellDef> Name </th>
-                <td mat-cell *matCellDef="let element"> {{element.Name}} </td>
-              </ng-container>
-          
-              <!-- Weight Column -->
-              <ng-container matColumnDef="AccountNumber">
-                <th mat-header-cell *matHeaderCellDef> Account Number </th>
-                <td mat-cell *matCellDef="let element"> {{element.AccountNumber}} </td>
-              </ng-container>
-          
-              <!-- Symbol Column -->
-              <ng-container matColumnDef="Status">
-                <th mat-header-cell *matHeaderCellDef> Status </th>
+              
+              <ng-container matColumnDef="userId">
+                <th mat-header-cell *matHeaderCellDef> User ID </th>
                 <td mat-cell *matCellDef="let element"> 
-                    <div class="status_">
-                        <div class="mr-2" [ngClass]="element.Status === 0 ? 'status-green' : element.Status === 1 ? 'status-warning' : 'status-red'"></div>
-                        <div>{{element.Status == 0 ? 'Active' : element.Status == 1 ? 'Inactive' : 'Blocked'}}</div>
+                    <div class="userId">
+                        {{element.userId}} 
+                    </div>
+                </td>
+              </ng-container>
+          
+              
+              <ng-container matColumnDef="title">
+                <th mat-header-cell *matHeaderCellDef> Title </th>
+                <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+              </ng-container>
+          
+              
+              <ng-container matColumnDef="completed">
+                <th mat-header-cell *matHeaderCellDef> Completed </th>
+                <td mat-cell *matCellDef="let element"> 
+                    <div class="status_" [ngClass]="element.completed === true ? 'status_green' : 'status_warning'">
+                        <div class="mr-2" [ngClass]="element.completed === true ? 'status-green' : 'status-warning'"></div>
+                        <div>{{element.completed == true ? 'Reconcilled' : 'Pending'}}</div>
                     </div>
                 </td>
               </ng-container>

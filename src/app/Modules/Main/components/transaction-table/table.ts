@@ -1,7 +1,7 @@
 
 export interface UsersList {
-    Sn: number;
-    Name: string;
-    AccountNumber: string;
-    Status: number;
+    id: number;
+    userId: number;
+    title: string;
+    completed: boolean;
 }

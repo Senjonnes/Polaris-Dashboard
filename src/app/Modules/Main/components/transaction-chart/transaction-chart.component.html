@@ -1,13 +1,13 @@
-<div class="col-md-12 transaction-charts_">
+<div class="col-md-12 transaction-charts_" *ngIf="tran">
     <div class="trans_body">
         <div class="trans_">
-            <div>Daily Transaction Volume</div>
-            <div class="value">2,342</div>
+            <div>{{tran.title}}</div>
+            <div class="value">{{tran.value}}</div>
         </div>
     </div>
     <div class="trans_chart">
         <div class="_chart">
-            <img src='assets/img/m_set.svg'>
+            <img src='assets/img/charts.svg'>
         </div>
     </div>
 </div>
