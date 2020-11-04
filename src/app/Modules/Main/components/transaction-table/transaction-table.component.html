@@ -1,0 +1,47 @@
+<div class="card text-center chart">
+    <div class="card-body">
+        <mat-form-field>
+            <mat-label>Filter</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+            <!-- <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input> -->
+        </mat-form-field>
+        <div class="mat-elevation-z8">
+            <table mat-table [dataSource]="dataSource">
+          
+              <!-- Position Column -->
+              <ng-container matColumnDef="Sn">
+                <th mat-header-cell *matHeaderCellDef> No. </th>
+                <td mat-cell *matCellDef="let element"> {{element.Sn}} </td>
+              </ng-container>
+          
+              <!-- Name Column -->
+              <ng-container matColumnDef="Name">
+                <th mat-header-cell *matHeaderCellDef> Name </th>
+                <td mat-cell *matCellDef="let element"> {{element.Name}} </td>
+              </ng-container>
+          
+              <!-- Weight Column -->
+              <ng-container matColumnDef="AccountNumber">
+                <th mat-header-cell *matHeaderCellDef> Account Number </th>
+                <td mat-cell *matCellDef="let element"> {{element.AccountNumber}} </td>
+              </ng-container>
+          
+              <!-- Symbol Column -->
+              <ng-container matColumnDef="Status">
+                <th mat-header-cell *matHeaderCellDef> Status </th>
+                <td mat-cell *matCellDef="let element"> 
+                    <div class="status_">
+                        <div class="mr-2" [ngClass]="element.Status === 0 ? 'status-green' : element.Status === 1 ? 'status-warning' : 'status-red'"></div>
+                        <div>{{element.Status == 0 ? 'Active' : element.Status == 1 ? 'Inactive' : 'Blocked'}}</div>
+                    </div>
+                </td>
+              </ng-container>
+          
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="userDetails(row)"></tr>
+            </table>
+          
+            <mat-paginator class="ivyusers" [pageSizeOptions]="[10]" showFirstLastButtons></mat-paginator>
+        </div>
+    </div>
+</div>

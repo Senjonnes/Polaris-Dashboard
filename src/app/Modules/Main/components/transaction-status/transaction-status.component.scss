@@ -1,0 +1,129 @@
+#wrapper {
+    overflow-x: hidden;
+    background: #f4f5f8!important;
+    height: 100%;
+ }
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -20rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 2rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 20rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+  padding: 0px 16px
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+.list-group-item {
+    padding: 1.75rem 1.75rem;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+
+nav {
+    padding: 24px;
+}
+
+
+.main-page {
+    background: #f4f5f8!important;
+}
+
+.illustration {
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+}
+
+.transaction-charts {
+  margin-top: 3%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.sortings {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0px;
+}
+
+.sortings-charts_ {
+    height: 6rem;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    color: #1860EC;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.3px;
+    justify-content: space-between;
+}
+
+.transaction-charts_:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+}
+
+.container_ {
+    margin: 0px 10px;
+}
+
+.img_ {
+    height: 90%;
+}
+
+.table1 {
+    background: #ffffff!important;
+    border-right: 2px solid #f4f5f8;
+}
+
+.details1 {
+    background: #ffffff!important;
+    border-bottom: 2px solid #f4f5f8;
+    border-left: 2px solid #f4f5f8;
+}
+
+.details2 {
+    background: #ffffff!important;
+    border-top: 2px solid #f4f5f8;
+    border-left: 2px solid #f4f5f8;
+}
+
+.details {
+    background: #f4f5f8!important;
+}

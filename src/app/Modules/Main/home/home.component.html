@@ -1,0 +1,36 @@
+<app-header></app-header>
+<div class="d-flex" id="wrapper">
+    <app-nav></app-nav>
+    <div id="page-content-wrapper">
+        <div class="container-fluid main-page">
+            <div class="container_">
+                <div class="row transaction-charts">
+                    <div class="col-md-3 mb-10">
+                        <app-transaction-chart></app-transaction-chart>
+                    </div>
+                    <div class="col-md-3 mb-10">
+                        <app-transaction-chart></app-transaction-chart>
+                    </div>
+                    <div class="col-md-3 mb-10">
+                        <app-transaction-chart></app-transaction-chart>
+                    </div>
+                    <div class="col-md-3 mb-10">
+                        <app-transaction-chart></app-transaction-chart>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container-fluid main-page">
+            <div class="container_">
+                <app-transaction-status></app-transaction-status>
+            </div>
+        </div>
+        
+        <div class="container-fluid main-page">
+            <div class="container_">
+                <app-transaction-table></app-transaction-table>
+            </div>
+        </div>
+    </div>
+</div>

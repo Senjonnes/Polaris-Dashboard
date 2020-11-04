@@ -1,0 +1,39 @@
+.transaction-charts_ {
+    // height: 6rem;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
+    display: flex;
+    padding: 16px;
+    align-items: center;
+    color: #647787;
+    font-weight: normal!important;
+    font-size: 0.8rem;
+    line-height: 28px;
+    letter-spacing: 0.3px;
+    justify-content: space-between;
+}
+
+.transaction-charts_:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+}
+
+.trans_body {
+    width: 70%;
+    .trans_ {
+        width: 100%;
+        .value {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.trans_chart {
+    width: 30%;
+    ._chart {
+        width: 100%;
+    }
+}
